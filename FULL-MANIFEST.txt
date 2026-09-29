@@ -1,0 +1,86 @@
+TRADE AVATA COMPLETE PACKAGE MANIFEST
+=====================================
+This is a merged package. It is not a layer upload.
+
+Required root/build files:
+- package.json
+- astro.config.mjs
+- firebase.json
+- .gitignore
+- .env.example
+- .github/workflows/build-and-deploy.yml
+
+Backend architecture/config:
+- backend/BACKEND-ARCHITECTURE.md
+- backend/COMMUNICATION-AND-EMAIL.md
+- backend/COPY-TRADING-ARCHITECTURE.md
+- backend/PLATFORM-ANALYTICS.md
+- backend/schema/advertising.json
+- backend/schema/copy-trading.json
+- backend/schema/homepage.json
+- backend/schema/learning-cms.json
+- backend/schema/maintenance.json
+- backend/schema/platform-analytics.json
+- backend/schema/prop-firm.json
+- backend/schema/site-settings.json
+- backend/firebase/firestore.rules
+
+Firebase:
+- firebase/firestore.rules
+- firebase/firestore.indexes.json
+- firebase/storage.rules
+
+Cloud Functions / email:
+- functions/index.js
+- functions/package.json
+- functions/email/config.js
+- functions/email/service.js
+- functions/email/templates.js
+
+Public site:
+- public/brand/trade-avata-logo.svg
+- public/brand/trade-avata-logo-light.svg
+- public/images/hero-laptop.svg
+- public/images/indicator-placeholder.svg
+- src/components/*
+- src/data/site.js
+- src/layouts/*
+- src/lib/analytics/*
+- src/lib/firebase/*
+- src/styles/*
+- src/pages/*
+
+Admin areas included:
+- admin dashboard
+- homepage management
+- Learn management
+- maintenance
+- advertising
+- support
+- email centre/settings
+- copy trading controls
+
+Public areas included:
+- Home
+- Learn
+- Trade
+- Tools
+- Market
+- Store
+- Products
+- About
+- Contact
+- Login/Register
+- Analytics
+- Journal
+- Prop Firm
+- Copy Trading
+
+NOT INCLUDED INTENTIONALLY:
+- Real production API keys
+- Firebase private credentials
+- SMTP/Resend credentials
+- Payment provider secrets
+- Broker execution credentials
+
+These must be configured later through secure environment/secret settings.

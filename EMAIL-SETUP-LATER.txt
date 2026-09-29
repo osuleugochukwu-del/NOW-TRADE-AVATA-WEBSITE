@@ -1,0 +1,25 @@
+TRADE AVATA — EMAIL SETUP LATER
+
+This build is intentionally domain/provider neutral.
+
+RIGHT NOW
+- Do not add a production domain.
+- Keep EMAIL_PROVIDER=none.
+- Keep EMAIL_ENABLED=false.
+- Keep EMAIL_DRY_RUN=true.
+- The application can still queue and log email work without sending real mail.
+
+WHEN THE DOMAIN IS PURCHASED
+1. Choose the receiving/routing method for addresses such as support@YOUR-DOMAIN.
+2. Choose the outbound transactional provider (SMTP or Resend-compatible transport).
+3. Verify the sending domain with that provider.
+4. Add the provider's SPF/DKIM/DMARC DNS records as instructed by the provider.
+5. Configure server-side credentials; never place provider keys in frontend code or GitHub.
+6. Set APP_URL and FRONTEND_URL to the real website URL.
+7. Set EMAIL_FROM_EMAIL to the verified sender address.
+8. Set SUPPORT_EMAIL and ADMIN_EMAIL where needed.
+9. Turn EMAIL_ENABLED=true and EMAIL_DRY_RUN=false only after testing.
+10. Test welcome, verification, password reset, contact, support and system notifications.
+
+IMPORTANT
+Incoming mail routing and outgoing transactional sending are separate systems. A domain can receive support@YOUR-DOMAIN through routing while the application sends transactional mail through a separate provider.
