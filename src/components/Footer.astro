@@ -9,7 +9,7 @@ import { socialLinks } from '../data/site.js';
       <a class="footer-brand" href={base}>
         <img
           class="footer-logo"
-          src={`${base}brand/trade-avata-logo.svg`}
+          src={base + "brand/trade-avata-logo.svg"}
           alt="Trade Avata — Trade Simple"
         />
       </a>
@@ -18,40 +18,39 @@ import { socialLinks } from '../data/site.js';
 
     <div>
       <h2>Explore</h2>
-      <a href={`${base}learn/`}>Learn</a>
-      <a href={`${base}trade/`}>Trade</a>
-      <a href={`${base}tools/`}>Tools</a>
-      <a href={`${base}market/`}>Market</a>
-      <a href={`${base}store/`}>Store</a>
+      <a href={base + "learn/"}>Learn</a>
+      <a href={base + "trade/"}>Trade</a>
+      <a href={base + "tools/"}>Tools</a>
+      <a href={base + "market/"}>Market</a>
+      <a href={base + "store/"}>Store</a>
     </div>
 
     <div>
       <h2>Platform</h2>
-      <a href={`${base}analytics/`}>AI Analytics</a>
-      <a href={`${base}journal/`}>Journal</a>
-      <a href={`${base}member/`}>Member Area</a>
+      <a href={base + "analytics/"}>AI Analytics</a>
+      <a href={base + "journal/"}>Journal</a>
+      <a href={base + "member/"}>Member Area</a>
     </div>
 
     <div>
       <h2>Company</h2>
-      <a href={`${base}about/`}>About</a>
-      <a href={`${base}contact/`}>Contact</a>
-      <a href={`${base}legal/risk-disclosure/`}>Risk Disclosure</a>
+      <a href={base + "about/"}>About</a>
+      <a href={base + "contact/"}>Contact</a>
+      <a href={base + "legal/risk-disclosure/"}>Risk Disclosure</a>
     </div>
   </div>
 
   <div class="shell footer-social">
     <strong>Follow Trade Avata</strong>
+
     <div>
-      {
-        socialLinks
-          .filter((link) => link.enabled !== false && link.href)
-          .map((link) => (
-            <a href={link.href} target="_blank" rel="noopener noreferrer">
-              {link.label}
-            </a>
-          ))
-      }
+      {socialLinks.map((link) => (
+        link.enabled !== false && link.href ? (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            {link.label}
+          </a>
+        ) : null
+      ))}
     </div>
   </div>
 
