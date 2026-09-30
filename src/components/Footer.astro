@@ -1,14 +1,15 @@
 ---
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer class="site-footer">
   <div class="shell footer-grid">
 
     <div>
-      <a class="footer-brand" href="/">
+      <a class="footer-brand" href={base}>
         <img
           class="footer-logo"
-          src="/brand/trade-avata-logo.svg"
+          src={`${base}brand/trade-avata-logo.svg`}
           alt="Trade Avata — Trade Simple"
         />
       </a>
@@ -18,25 +19,25 @@
 
     <div>
       <h2>Explore</h2>
-      <a href="/learn/">Learn</a>
-      <a href="/trade/">Trade</a>
-      <a href="/tools/">Tools</a>
-      <a href="/market/">Market</a>
-      <a href="/store/">Store</a>
+      <a href={`${base}learn/`}>Learn</a>
+      <a href={`${base}trade/`}>Trade</a>
+      <a href={`${base}tools/`}>Tools</a>
+      <a href={`${base}market/`}>Market</a>
+      <a href={`${base}store/`}>Store</a>
     </div>
 
     <div>
       <h2>Platform</h2>
-      <a href="/analytics/">AI Analytics</a>
-      <a href="/journal/">Journal</a>
-      <a href="/member/">Member Area</a>
+      <a href={`${base}analytics/`}>AI Analytics</a>
+      <a href={`${base}journal/`}>Journal</a>
+      <a href={`${base}member/`}>Member Area</a>
     </div>
 
     <div>
       <h2>Company</h2>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-      <a href="/legal/risk-disclosure/">Risk Disclosure</a>
+      <a href={`${base}about/`}>About</a>
+      <a href={`${base}contact/`}>Contact</a>
+      <a href={`${base}legal/risk-disclosure/`}>Risk Disclosure</a>
     </div>
 
   </div>
